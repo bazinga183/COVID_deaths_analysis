@@ -1,6 +1,11 @@
 # Group_Project
 This project is oriented towards the group project for UT's Data Boot Camp.
 
+# Week 1
+- **Selected Topic:**
+- **Source Data:**
+  - [links to sources](https://data.cdc.gov/Case-Surveillance/COVID-19-Case-Surveillance-Public-Use-Data/vbim-akqf)
+
 **Roles**
  - **Eduardo** Square: The team member in the square role will be responsible for the repository. 
  - **Caroline** Triangle: The member in the triangle role will create a mockup of a machine learning model. This can even be a diagram that explains how it will work concurrently with the rest of the project steps.
