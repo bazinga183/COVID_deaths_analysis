@@ -2,9 +2,8 @@
 This project is oriented towards the group project for UT's Data Boot Camp.
 
 # Week 1
-- **Selected Topic:**
-- **Source Data:**
-  - [links to sources](https://data.cdc.gov/Case-Surveillance/COVID-19-Case-Surveillance-Public-Use-Data/vbim-akqf)
+- **Selected Topic:** We've decided to focus on outcomes of COVID-19 cases in the US. The COVID-19 pandemic is an ongoing health crisis, and quantifying the relationship between patient health and death from COVID can be instrumental in discovering issues that may be contributing to the disease's death toll. It can also be valuable in reducing the impact of future pandemics.
+- **Source Data:** Our primary source will be [COVID-19 Case Surveillance Data](https://data.cdc.gov/Case-Surveillance/COVID-19-Case-Surveillance-Public-Use-Data/vbim-akqf) from the CDC. The data set records both probable and confirmed COVID-19 cases in the US, as well as details about the patient, including sex, age group, race, ethnicity, presence of underlying health conditions, whether the patient received hospital or ICU care, and whether case resulted in death. With this data, we hope to discover which factors contribute most strongly to COVID-19 case outcome.
 
 **Roles**
  - **Eduardo** Square: The team member in the square role will be responsible for the repository. 
