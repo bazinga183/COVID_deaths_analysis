@@ -7,7 +7,7 @@ Our project focuses on outcomes of COVID-19 cases in the US, and specific patien
 ## Project Protocols
 
 ### Communication
-Our main line of communication will come from using Slack to coordinate which parts of the project we are working on and will begin working on as well as weekly Team Meetings via Zoom. All updates regarding the project will be posted within Slack and communicated to Eduardo as he is fulfilling the role of the Square for this project; the role responsible for maintaining the GitHub repository.
+Our main line of communication will come from using Slack to coordinate which parts of the project we are working on and will begin working on as well as weekly Team Meetings via Zoom. All updates regarding the project will be posted within Slack and communicated to Eduardo as he is fulfilling the role responsible for maintaining the GitHub repository.
 
 In addition, any pull requests to any branch(es) will be communicated to each team member during a team meeting and we will all go through the data together and see if we approve of the outcome.  
 
