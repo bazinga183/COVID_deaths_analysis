@@ -55,7 +55,7 @@ To be able to achieve the target of 90%, two different ensemble classifiers were
 ### Summary
 To be able to predict the COVID outcome, the model needs to allow the least amount of false positives results. The statistic used for this is the recall for death outcomes.
 
-Analyzing the results of the two different methods was observed that Easy Ensemble presented the highest recall at 91% while Random Forest presented only 24%.
+Analyzing the results of the two different methods was observed that Easy Ensemble presented the highest recall with 91% while Random Forest presented only 24%.
 
 Analyzing the accurary score to see the models overall performance, we can see that the model with the highest accuracy score was Easy Ensemble  with 92%, while Random Forest presented 62%.
 
