@@ -42,3 +42,21 @@ For binary fields, 0 corresponds to "No" and 1 to "Yes".
 
 ### Data Limitations
 The raw CDC data set contains many unknown or missing values across every health factor. As our analysis aims to measure the influence of certain health factors relative to others on COVID-19 case outcome, we have chosen to focus on case records that have clearly reported values for each factor. Further analysis might focus on fewer factors to allow the use of more cases, as some metrics have fewer unknowns than others. We see our analysis as one that can point to relationships between COVID-19 case outcome and patient information, so that those relationships can be more closely targeted by future investigation.
+
+## Analysis
+
+### Supervised Machine Learning
+A classification Supervised Machine Learning model was selected for this analysis, to be able to accurately predict COVID-19 case outcome given various patient data, with an accuracy and recall target of 90%.
+
+To be able to achieve the target of 90%, two different ensemble classifiers were tested, Rndom Forest and Easy Ensemble. 
+
+### Results
+
+### Summary
+To be able to predict the COVID outcome, the model needs to allow the least amount of false positives results. The statistic used for this is the recall for death outcomes.
+
+Analyzing the results of the two different methods was observed that Easy Ensemble presented the highest recall at 91% while Random Forest presented only 24%.
+
+Analyzing the accurary score to see the models overall performance, we can see that the model with the highest accuracy score was Easy Ensemble  with 92%, while Random Forest presented 62%.
+
+After analyzing these two main statistics, the model that was able to accuratly predict COVID outcomes is the Easy Ensemble Classifying model.
