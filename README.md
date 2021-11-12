@@ -52,6 +52,14 @@ To be able to achieve the target of 90%, two different ensemble classifiers were
 
 ### Results
 
+#### Random Forest
+
+![Random](https://github.com/bazinga183/COVID_deaths_analysis/blob/main/Resources/Results/Random_Forest.PNG)
+
+#### Easy Ensemble
+
+![Easy](https://github.com/bazinga183/COVID_deaths_analysis/blob/main/Resources/Results/Easy_Ensemble.PNG)
+
 ### Summary
 To be able to predict the COVID outcome, the model needs to allow the least amount of false positives results. The statistic used for this is the recall for death outcomes.
 
