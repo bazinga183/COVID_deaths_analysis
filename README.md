@@ -14,7 +14,7 @@ In addition, any pull requests to any branch(es) will be communicated to each te
 ### Roles
  - **Eduardo** is responsible for overseeing the repository and any actions taken by team members to update it, including pull requests and merging. 
  - **Caroline** is responsible for developing the machine learning model to identify COVID-19 case outcome. This includes integrating the model with the database in which the data is stored.
- - **Raquel** is responsible for conducting an ETL process on the CDC data, including data cleaning and wrangling, and database design and creation.
+ - **Raquel** is responsible for conducting an ETL process on the CDC data, including data cleaning and wrangling, and database design and creation. She is also responsible for all dashboard and visualization design.
 
 ## Source Data
 
