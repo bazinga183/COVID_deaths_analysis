@@ -48,7 +48,7 @@ The raw CDC data set contains many unknown or missing values across every health
 ### Supervised Machine Learning
 A classification Supervised Machine Learning model was selected for this analysis, to be able to accurately predict COVID-19 case outcome given various patient data, with an accuracy and recall target of 90%.
 
-To be able to achieve the target of 90%, two different ensemble classifiers were tested, Rndom Forest and Easy Ensemble. 
+To be able to achieve the target of 90%, two different ensemble classifiers were tested, Random Forest and Easy Ensemble. 
 
 ### Results
 
@@ -77,6 +77,6 @@ To be able to predict the COVID outcome, the model needs to allow the least amou
 
 Analyzing the results of the two different methods was observed that Easy Ensemble presented the highest recall with 91% while Random Forest presented only 24%.
 
-Analyzing the accurary score to see the models overall performance, we can see that the model with the highest accuracy score was Easy Ensemble  with 92%, while Random Forest presented 62%.
+Analyzing the accuracy score to see the model's overall performance, we can see that the model with the highest accuracy score was Easy Ensemble  with 92%, while Random Forest presented 62%.
 
-After analyzing these two main statistics, the model that was able to accuratly predict COVID outcomes is the Easy Ensemble Classifying model.
+After analyzing these two main statistics, the model that was able to accurately predict COVID outcomes is the Easy Ensemble Classifying model.
