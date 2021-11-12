@@ -54,9 +54,21 @@ To be able to achieve the target of 90%, two different ensemble classifiers were
 
 #### Random Forest
 
+* Accuracy Score: 62%
+* Precision Survivals: 97%
+* Precision Deaths: 57%
+* Recall Survivals: 99%
+* Recall Deaths: 24%
+
 ![Random](https://github.com/bazinga183/COVID_deaths_analysis/blob/main/Resources/Results/Random_Forest.PNG)
 
 #### Easy Ensemble
+
+* Accuracy Score: 92%
+* Precision Survivals: 100%
+* Precision Deaths: 29%
+* Recall Survivals: 93%
+* Recall Deaths: 91%
 
 ![Easy](https://github.com/bazinga183/COVID_deaths_analysis/blob/main/Resources/Results/Easy_Ensemble.PNG)
 
