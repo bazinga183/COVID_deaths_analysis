@@ -48,7 +48,8 @@ The raw CDC data set contains many unknown or missing values across every health
 ### Supervised Machine Learning
 A classification Supervised Machine Learning model was selected for this analysis, to be able to accurately predict COVID-19 case outcome given various patient data, with an accuracy and recall target of 90%.
 
-To be able to achieve the target of 90%, two different ensemble classifiers were tested, Random Forest and Easy Ensemble. 
+To be able to achieve the target of 90%, two different ensemble classifiers were tested, Random Forest and Easy Ensemble. [Ensemble Supervised Machine Learning](https://github.com/bazinga183/COVID_deaths_analysis/blob/main/Final_Project_ensemble.ipynb)
+
 
 ### Results
 
