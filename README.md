@@ -43,13 +43,20 @@ For binary fields, 0 corresponds to "No" and 1 to "Yes".
 ### Data Limitations
 The raw CDC data set contains many unknown or missing values across every health factor. As our analysis aims to measure the influence of certain health factors relative to others on COVID-19 case outcome, we have chosen to focus on case records that have clearly reported values for each factor. Further analysis might focus on fewer factors to allow the use of more cases, as some metrics have fewer unknowns than others. We see our analysis as one that can point to relationships between COVID-19 case outcome and patient information, so that those relationships can be more closely targeted by future investigation.
 
-### Tableau Visualization
+## Tableau Visualization
 
 We decided to map out the data we had on hand to get a look at what would be in store for this project. All visualizations used for this project will be located in a Tableau Public [webpage](https://public.tableau.com/app/profile/raquel.gaucin/viz/COVID-19CaseAnalysis/COVID-19CaseAnalysisDashboard).
 
+### Surface-Level Visualizations
+
+#### Medical Condition
+Our curiosity begins when we look at the death rate while having a medical condition at the time.Approximately 6% of those with a medical condition succumbed to the virus, whereas almost 2% of those without a medical condition passed away. This means that having a medical condition while infected with COVID-19 implies a 300% higher chance of death. 
+
+<img width="673" alt="death_rate_by_med_cond" src="https://user-images.githubusercontent.com/46951897/142105662-4bb0e531-c2e8-48ee-8930-780cf3566e93.png">
+
 #### Sex
 
-Our curiosity begins when we look at the death rate by sex. We observe in the visualization below that females had an approximate death rate of 2% and males 3%. However, within the data, there is an "unknown" gender whose death rate is at approximately 1.5%.  
+After medical condition, we looked at the death rate by sex. We observe in the visualization below that females had an approximate death rate of 2% and males 3%. However, within the data, there is an "unknown" gender whose death rate is at approximately 1.5%.  
 
 <img width="677" alt="death_rate_by_sex" src="https://user-images.githubusercontent.com/46951897/142095573-c62956bf-6ec8-4e63-914d-5a8bb7a6d47f.png">
 
@@ -60,6 +67,10 @@ For our next simple comparison, we decided to examine the age cohorts where each
 <img width="677" alt="death_rate_by_age" src="https://user-images.githubusercontent.com/46951897/142096388-22b024b3-cbb6-46c6-8cef-7d74deb38aa8.png">
 
 #### Race/Ethnicity
+
+Here is where some of the group found their inital surprises when comparing general death rates across only race/ethnicity (r/e). We found that American Indian/Alaskan Natives had the highest death rate among the other r/e's by half a percentage point at aproximately 4%. The r/e that followed was the White r/e at approximately 3.5%. 
+
+<img width="676" alt="death_rate_by_race" src="https://user-images.githubusercontent.com/46951897/142100531-2111c16c-606d-4fbd-941d-b08436624727.png">
 
 ## Analysis
 
