@@ -43,8 +43,6 @@ For binary fields, 0 corresponds to "No" and 1 to "Yes".
 ### Data Limitations
 The raw CDC data set contains many unknown or missing values across every health factor. As our analysis aims to measure the influence of certain health factors relative to others on COVID-19 case outcome, we have chosen to focus on case records that have clearly reported values for each factor. Further analysis might focus on fewer factors to allow the use of more cases, as some metrics have fewer unknowns than others. We see our analysis as one that can point to relationships between COVID-19 case outcome and patient information, so that those relationships can be more closely targeted by future investigation.
 
-## Analysis
-
 ### Tableau Visualization
 
 We decided to map out the data we had on hand to get a look at what would be in store for this project. All visualizations used for this project will be located in a Tableau Public [webpage](https://public.tableau.com/app/profile/raquel.gaucin/viz/COVID-19CaseAnalysis/COVID-19CaseAnalysisDashboard).
@@ -63,6 +61,7 @@ For our next simple comparison, we decided to examine the age cohorts where each
 
 #### Race/Ethnicity
 
+## Analysis
 
 ### Supervised Machine Learning
 A classification Supervised Machine Learning model was selected for this analysis, to be able to accurately predict COVID-19 case outcome given various patient data, with an accuracy and recall target of 90%.
