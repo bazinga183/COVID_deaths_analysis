@@ -45,6 +45,14 @@ The raw CDC data set contains many unknown or missing values across every health
 
 ## Analysis
 
+### Tableau Visualization
+
+We decided to map out the data we had on hand to get a look at what would be in store for this project. All visualizations used for this project will be located in a Tableau Public [webpage](https://public.tableau.com/app/profile/raquel.gaucin/viz/COVID-19CaseAnalysis/COVID-19CaseAnalysisDashboard).
+
+Our curiosity begins when we look at the death rate by sex:
+
+https://github.com/bazinga183/COVID_deaths_analysis/blob/main/Resources/Visualizations/death_rate_by_sex.png
+
 ### Supervised Machine Learning
 A classification Supervised Machine Learning model was selected for this analysis, to be able to accurately predict COVID-19 case outcome given various patient data, with an accuracy and recall target of 90%.
 
