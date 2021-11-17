@@ -49,9 +49,13 @@ The raw CDC data set contains many unknown or missing values across every health
 
 We decided to map out the data we had on hand to get a look at what would be in store for this project. All visualizations used for this project will be located in a Tableau Public [webpage](https://public.tableau.com/app/profile/raquel.gaucin/viz/COVID-19CaseAnalysis/COVID-19CaseAnalysisDashboard).
 
-Our curiosity begins when we look at the death rate by sex:
+Our curiosity begins when we look at the death rate by sex. We observe in the visualization below that females had an approximate death rate of 2% and males 3%. However, within the data, there is an "unknown" gender whose death rate is at approximately 1.5%.  
 
-https://github.com/bazinga183/COVID_deaths_analysis/blob/main/Resources/Visualizations/death_rate_by_sex.png
+<img width="677" alt="death_rate_by_sex" src="https://user-images.githubusercontent.com/46951897/142095573-c62956bf-6ec8-4e63-914d-5a8bb7a6d47f.png">
+
+For our next simple comparison, we decided to examine the age cohorts where each cohort spanned a range of 10 years. The most dominant death rate by far is for those who are past 80 years of age since there death rate is approxmately 29%. This is close to saying that 3 in 10 adults 80+ years old who contracted COVID would succumb to the virus. This graph is also interesting because there is an almost exponential increase in the probability of dying as a person ascends through each age group.
+
+<img width="677" alt="death_rate_by_age" src="https://user-images.githubusercontent.com/46951897/142096388-22b024b3-cbb6-46c6-8cef-7d74deb38aa8.png">
 
 ### Supervised Machine Learning
 A classification Supervised Machine Learning model was selected for this analysis, to be able to accurately predict COVID-19 case outcome given various patient data, with an accuracy and recall target of 90%.
