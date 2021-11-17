@@ -72,6 +72,16 @@ Here is where some of the group found their inital surprises when comparing gene
 
 <img width="676" alt="death_rate_by_race" src="https://user-images.githubusercontent.com/46951897/142100531-2111c16c-606d-4fbd-941d-b08436624727.png">
 
+### In-Depth Visualiztions
+
+#### Death Rate by Age and Sex
+
+<img width="497" alt="age_sex_heatmap" src="https://user-images.githubusercontent.com/46951897/142118875-f539649a-c61e-4c0c-9295-260ccced7471.png">
+
+#### Death Rate by Medical Condition and Race/Ethnicity
+
+<img width="408" alt="race_med_cond_heatmap" src="https://user-images.githubusercontent.com/46951897/142118207-9fd30770-3cf3-4661-bfd9-ccc5b898d7c7.png">
+
 ## Analysis
 
 ### Supervised Machine Learning
