@@ -89,8 +89,9 @@ A classification Supervised Machine Learning model was selected for this analysi
 
 To be able to achieve the target of 90%, two different ensemble classifiers were tested, [Random Forest and Easy Ensemble](https://github.com/bazinga183/COVID_deaths_analysis/blob/main/Final_Project_ensemble.ipynb). 
 
+For this analysis, two models were tested. The first model was taking hospitalization data into account and the second model was tested without hospitalization data.
 
-### Results
+### Results with hospitalization data
 
 #### Random Forest
 
@@ -112,10 +113,34 @@ To be able to achieve the target of 90%, two different ensemble classifiers were
 
 ![Easy](https://github.com/bazinga183/COVID_deaths_analysis/blob/main/Resources/Results/Easy_Ensemble.PNG)
 
+### Results without hospitalization data
+
+#### Random Forest
+
+* Accuracy Score: 51%
+* Precision Survivals: 97%
+* Precision Deaths: 59%
+* Recall Survivals: 100%
+* Recall Deaths: 2%
+
+![Random](https://github.com/bazinga183/COVID_deaths_analysis/blob/main/Resources/Results/Random_without_hospital.PNG)
+
+#### Easy Ensemble
+
+* Accuracy Score: 85%
+* Precision Survivals: 99%
+* Precision Deaths: 14%
+* Recall Survivals: 82%
+* Recall Deaths: 88%
+
+![Easy](https://github.com/bazinga183/COVID_deaths_analysis/blob/main/Resources/Results/Easy_without_hospital.PNG)
+
 ### Summary
 To be able to predict the COVID outcome, the model needs to allow the least amount of false positives results. The statistic used for this is the recall for death outcomes.
 
-Analyzing the results of the two different methods was observed that Easy Ensemble presented the highest recall with 91% while Random Forest presented only 24%.
+Comparing both models, the model that took hospitalization data as an input was more accurate, reaching the goal of 90%. The model without hospitalization data was also very accurate, reaching 88%. With that said we can conclude that hospitalization helps determining the outcome of COVID cases.
+
+Analyzing the results of the model that takes hospitalization data as an input, compering the two different methods utilized was observed that Easy Ensemble presented the highest recall with 91% while Random Forest presented only 24%.
 
 Analyzing the accuracy score to see the model's overall performance, we can see that the model with the highest accuracy score was Easy Ensemble  with 92%, while Random Forest presented 62%.
 
