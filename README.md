@@ -123,7 +123,7 @@ For this analysis, two models were tested. The first model was taking hospitaliz
 * Recall Survivals: 100%
 * Recall Deaths: 2%
 
-![Random](https://github.com/bazinga183/COVID_deaths_analysis/blob/main/Resources/Results/Random_without_hospital.PNG)
+![Random](https://github.com/bazinga183/COVID_deaths_analysis/blob/main/Resources/Results/Random_without_hospital.png)
 
 #### Easy Ensemble
 
@@ -133,7 +133,7 @@ For this analysis, two models were tested. The first model was taking hospitaliz
 * Recall Survivals: 82%
 * Recall Deaths: 88%
 
-![Easy](https://github.com/bazinga183/COVID_deaths_analysis/blob/main/Resources/Results/Easy_without_hospital.PNG)
+![Easy](https://github.com/bazinga183/COVID_deaths_analysis/blob/main/Resources/Results/Easy_without_hospital.png)
 
 ### Summary
 To be able to predict the COVID outcome, the model needs to allow the least amount of false positives results. The statistic used for this is the recall for death outcomes.
