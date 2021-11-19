@@ -95,7 +95,7 @@ While these visualizations have told an interesting story, our team was also cur
 However, after almost a year within the pandemic and facing shutdown within the US, the death rate for those in their 80's decreased to approximately 15% and those in their 70's had their death rate decrease to almost 7%. 
 Both age cohorts cut their death rates by 50%, an astounding result for an unknown virus at the time, and the remaining cohorts saw little-to-no change remaining under a 6% death rate for the entirety of the pandemic.
 
-<img width="677" alt="metrics_over_time" src="https://user-images.githubusercontent.com/46951897/142551188-fbcf3ae0-124d-4079-a0aa-ad3e709e91b4.png">
+<img width="873" alt="death_rate_age_over_time" src="https://user-images.githubusercontent.com/46951897/142553505-1ef9a790-63ec-4e08-8918-df16931895c3.png">
 
 ## Analysis
 
