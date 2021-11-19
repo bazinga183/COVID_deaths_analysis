@@ -9,7 +9,7 @@ Our project focuses on outcomes of COVID-19 cases in the US, and specific patien
 ### Communication
 Our main line of communication will come from using Slack to coordinate which parts of the project we are working on and will begin working on as well as weekly Team Meetings via Zoom. All updates regarding the project will be posted within Slack and communicated to Eduardo as he is fulfilling the role responsible for maintaining the GitHub repository.
 
-In addition, any pull requests to any branch(es) will be communicated to each team member during a team meeting and we will all go through the data together and see if we approve of the outcome.  
+Any data/transformations done will be committed to a branch that is not the main branch, each memeber will begin with their own branch and create them to track a version control of their past efforts. In addition, any pull requests to any branch(es) will be communicated to each team member during a team meeting and we will all go through the data together and see if we approve of the outcome. Once the team approves, the data/transformations are merged into the main branch and each member pull the data into their local files for usage.
 
 ### Roles
  - **Eduardo** is responsible for overseeing the repository and any actions taken by team members to update it, including pull requests and merging. 
@@ -128,6 +128,11 @@ For this analysis, two models were tested. The first model was taking hospitaliz
 
 ![Easy](https://github.com/bazinga183/COVID_deaths_analysis/blob/main/Resources/Results/Easy_Ensemble.PNG)
 
+#### Takeaways With Hospitalization
+
+When we factor hospitalization within the ML Model, Random Forest had an overall high precision and recall rate for survival (above 96%) which means that the model could predict survivals relatively well. In contrast, its recall rate for both of survival and death were relatively low meaning that we had a high abundance of false positives and is not as accuracte when it comes to predicting deaths for COVID infected individuals.
+Looking at the Easy Ensemble model, we see that precision survivals, recall survivals, and recall deaths were very high in accuracy (above 90% each), but the precision deaths was low at 29%. This means that the model overestimated again overestimated the deaths of patients with false negatives.
+
 ### Results without hospitalization data
 
 #### Random Forest
@@ -149,6 +154,11 @@ For this analysis, two models were tested. The first model was taking hospitaliz
 * Recall Deaths: 88%
 
 ![Easy](https://github.com/bazinga183/COVID_deaths_analysis/blob/main/Resources/Results/Easy_without_hospital.png)
+
+#### Takeaways Without Hospitalization
+
+When we do not factor hospitalization within the ML Model, Random Forest's precision and recall rate for survival decreases but remain above 80%. In addition, the precision deaths metric increased to 59% while the recall deaths metric dropeed to 2% meaning that the model is still not as accurate when it comes to predicting deaths for COVID infected individuals.
+Looking at the Easy Ensemble model, we see that precision survivals remained about the same, recall deaths decreased slightly, but the recall survivals dropped by 11%, and precision deaths dropped to 14%. This means that the model overestimated the deaths of patients.
 
 ### Summary
 To be able to predict the COVID outcome, the model needs to allow the least amount of false positives results. The statistic used for this is the recall for death outcomes.
