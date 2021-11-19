@@ -74,13 +74,28 @@ Here is where some of the group found their inital surprises when comparing gene
 
 ### In-Depth Visualiztions
 
+For these following visualizations, we pulled together multiple factors that always includes age since there seems to be a correlation between death and age. This is to see if there are any other compunding factors that contribute to the death rate of infected people.
+
 #### Death Rate by Age and Sex
+
+When looking at the death rate as a consequence of an individual's age and sex, we can see from the heatmap that the age cohorts within the 70's and 80's+ are still most impacted, regardless of gender.
 
 <img width="497" alt="age_sex_heatmap" src="https://user-images.githubusercontent.com/46951897/142118875-f539649a-c61e-4c0c-9295-260ccced7471.png">
 
-#### Death Rate by Medical Condition and Race/Ethnicity
+#### Death Rate by Age and Race/Ethnicity
 
-<img width="408" alt="race_med_cond_heatmap" src="https://user-images.githubusercontent.com/46951897/142118207-9fd30770-3cf3-4661-bfd9-ccc5b898d7c7.png">
+Looking back at a different visualization, we see that American Indian/Alaska Natives are most impact by COVID. They are the only r/e to have a significant death rate within their 50's. In addition, they also have a higher death rate within their 70's compared to the other r/e groups. 
+Another interesting result to note is that Native Hawaaian/Pacific Islanders and Multiple/Other, Non-Hispanics have a lower death rate within their 80's compared to the others.
+
+<img width="532" alt="race_age_heatmap" src="https://user-images.githubusercontent.com/46951897/142551899-8f529c75-7261-4c82-80d3-b37973b383f7.png">
+
+#### Metrics Over Time
+
+While these visualizations have told an interesting story, our team was also curious about the death rate as the pandemic went on. The following visualization paints an abyssmal, but hopeful picture as early into the pandemic those who were above 80 years old had a 33% chance of dying and those in their 70's had a 13% chance of dying. 
+However, after almost a year within the pandemic and facing shutdown within the US, the death rate for those in their 80's decreased to approximately 15% and those in their 70's had their death rate decrease to almost 7%. 
+Both age cohorts cut their death rates by 50%, an astounding result for an unknown virus at the time, and the remaining cohorts saw little-to-no change remaining under a 6% death rate for the entirety of the pandemic.
+
+<img width="677" alt="metrics_over_time" src="https://user-images.githubusercontent.com/46951897/142551188-fbcf3ae0-124d-4079-a0aa-ad3e709e91b4.png">
 
 ## Analysis
 
