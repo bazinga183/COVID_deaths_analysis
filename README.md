@@ -61,7 +61,7 @@ The final dashboard for our project is located in a Tableau Public [webpage](htt
 
 ### Surface-Level Visualizations
 
-Our first visualizations compared death rates across categories within each petient demographic.
+Our first visualizations compared death rates across categories within each patient demographic.
 
 #### Sex
 
