@@ -93,6 +93,7 @@ Analysis of death rate across race/ethnicity produced some initial surprises. We
 <img width="676" alt="death_rate_by_race" src="https://user-images.githubusercontent.com/46951897/142100531-2111c16c-606d-4fbd-941d-b08436624727.png">
 
 #### Medical Condition
+
 We finally look at the influence of medical conditions on patient death rate. Approximately 6% of those with a medical condition succumbed to the virus, compared to 2.3% of those without a medical condition. This shows that as a group, patients with underlying medical conditions suffered over twice as many deaths as those without. 
 
 <img width="673" alt="death_rate_by_med_cond" src="https://user-images.githubusercontent.com/46951897/142105662-4bb0e531-c2e8-48ee-8930-780cf3566e93.png">
@@ -119,19 +120,19 @@ Another interesting result to note is that Native Hawaiian/Pacific Islanders and
 
 #### Age Group Breakdown
 
-We further interrogated the age/death rate relationship by examining the composition of each age group in terms of other demographics.
+We further interrogated the age/death rate relationship by examining the age composition of each demographic.
 
-This graph shows that among patients with a reported race, 74% of patients 80 years of age and over were reported as White. This percentage decreases steadily with age group (70-79: 69.7%, 60-69: 63.1%). This is noteworthy because if age is a strong predictor of death from COVID-19, then a prevalence of older White patients may account for a high observed death rate for White patients as a whole. Looking back at our heatmap comparing age and race, White patients are among the lower death rates across almost every age group.
+This graph shows that White non-Hispanic/Latinos had the greatest proportion of older patients, with 38.78% being 50 or older. Asian patients follow, with 29.57% being older than 50. This is noteworthy because if age is a strong predictor of death from COVID-19, then a prevalence of older patients in a racial group may account for a high observed death rate for that group as a whole. Looking back at our heatmap comparing age and race, White patients in particular are among the lower death rates across almost every age group, despite having the second highest death rate as a whole.
 
-<img width="677" alt="age_race_breakdown" src="https://raw.githubusercontent.com/bazinga183/COVID_deaths_analysis/77aebcfdc456d0936914e382de618d314ee4c238/Resources/Visualizations/age_race_breakdown.png">
+<img width="677" alt="breakdown_race_age" src="https://raw.githubusercontent.com/bazinga183/COVID_deaths_analysis/77aebcfdc456d0936914e382de618d314ee4c238/Resources/Visualizations/age_race_breakdown.png">
 
-Breaking down age groups by presence of a medical condition shows that more older patients tend to have a medical condition. This seems intuitive.
+Breaking down presence of a medical condition by age groups shows that a greater proportion of patients with a medical condition are older, with over half being 50 or more years of age. This seems intuitive.
 
-<img width="677" alt="age_med_cond_breakdown" src="https://raw.githubusercontent.com/bazinga183/COVID_deaths_analysis/77aebcfdc456d0936914e382de618d314ee4c238/Resources/Visualizations/age_med_cond_breakdown.png">
+<img width="677" alt="breakdown_med_cond_age" src="https://raw.githubusercontent.com/bazinga183/COVID_deaths_analysis/77aebcfdc456d0936914e382de618d314ee4c238/Resources/Visualizations/age_med_cond_breakdown.png">
 
-Composition by sex shows a more or less even break between male and female patients, with the largest imbalance being in the 80+ group (female patients comprise 59%). Like medical condition across age, this is an expected trend.
+Composition of sex shows very similar proportions between male and female patients, with patients reported as Other trending slightly younger. Like medical condition across age, this is an overall expected trend.
 
-<img width="677" alt="age_sex_breakdown" src="https://raw.githubusercontent.com/bazinga183/COVID_deaths_analysis/77aebcfdc456d0936914e382de618d314ee4c238/Resources/Visualizations/age_sex_breakdown.png">
+<img width="677" alt="breakdown_sex_age" src="https://raw.githubusercontent.com/bazinga183/COVID_deaths_analysis/77aebcfdc456d0936914e382de618d314ee4c238/Resources/Visualizations/age_sex_breakdown.png">
 
 #### Metrics Over Time
 
