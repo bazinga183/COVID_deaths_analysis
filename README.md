@@ -151,7 +151,7 @@ A classification Supervised Machine Learning model was selected for this analysi
 
 To be able to achieve the target of 90%, two different ensemble classifiers were tested, [Random Forest and Easy Ensemble](https://github.com/bazinga183/COVID_deaths_analysis/blob/main/Final_Project_ensemble.ipynb). 
 
-For this analysis, two models were tested. The first model was [taking hospitalization data into account] (https://github.com/bazinga183/COVID_deaths_analysis/blob/main/Final_Project_ensemble.ipynb) and the second model was tested [without hospitalization data] (https://github.com/bazinga183/COVID_deaths_analysis/blob/main/Final_Project_ensemble_excluding_hospital.ipynb).
+For this analysis, two models were tested. The first model was [taking hospitalization data into account](https://github.com/bazinga183/COVID_deaths_analysis/blob/main/Final_Project_ensemble.ipynb) and the second model was tested [without hospitalization data](https://github.com/bazinga183/COVID_deaths_analysis/blob/main/Final_Project_ensemble_excluding_hospital.ipynb).
 
 ### Results with hospitalization data
 
