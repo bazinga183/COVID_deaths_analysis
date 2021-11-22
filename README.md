@@ -112,15 +112,15 @@ We further interrogated the age/death rate relationship by examining the composi
 
 This graph shows that among patients with a reported race, 74% of patients 80 years of age and over were reported as White. This percentage decreases steadily with age group (70-79: 69.7%, 60-69: 63.1%). This is noteworthy because if age is a strong predictor of death from COVID-19, then a prevalence of older White patients may account for a high observed death rate for White patients as a whole. Looking back at our heatmap comparing age and race, White patients are among the lower death rates across almost every age group.
 
-INSERT AGE RACE BREAKDOWN
+<img width="677" alt="age_race_breakdown" src="https://raw.githubusercontent.com/bazinga183/COVID_deaths_analysis/77aebcfdc456d0936914e382de618d314ee4c238/Resources/Visualizations/age_race_breakdown.png">
 
 Breaking down age groups by presence of a medical condition shows that more older patients tend to have a medical condition. This seems intuitive.
 
-INSERT AGE MED COND BREAKDOWN
+<img width="677" alt="age_med_cond_breakdown" src="https://raw.githubusercontent.com/bazinga183/COVID_deaths_analysis/77aebcfdc456d0936914e382de618d314ee4c238/Resources/Visualizations/age_med_cond_breakdown.png">
 
 Composition by sex shows a more or less even break between male and female patients, with the largest imbalance being in the 80+ group (female patients comprise 59%). Like medical condition across age, this is an expected trend.
 
-INSERT AGE SEX BREAKDOWN
+<img width="677" alt="age_sex_breakdown" src="https://raw.githubusercontent.com/bazinga183/COVID_deaths_analysis/77aebcfdc456d0936914e382de618d314ee4c238/Resources/Visualizations/age_sex_breakdown.png">
 
 #### Metrics Over Time
 
