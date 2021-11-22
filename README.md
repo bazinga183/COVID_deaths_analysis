@@ -88,7 +88,7 @@ We then examine death rates across age groups. The highest death rate by far is 
 
 #### Race/Ethnicity
 
-Analysis of death rate across race/ethnicity produced some initial surprises. We find that American Indian/Alaskan Natives had the highest death rate at 4.0%. Following were White patients with a rate of 3.5%, and Black patients with 3.3%. Notably, Hispanic/Latino patients showed the lowest death rate at 1.8%. As stated under Data Limitations, the unclear raacial makeup of the Hispanic/Latino category means this rate could be misleading.
+Analysis of death rate across race/ethnicity produced some initial surprises. We find that American Indian/Alaskan Natives had the highest death rate at 4.0%. Following were White patients with a rate of 3.5%, and Black patients with 3.3%. Notably, Hispanic/Latino patients showed the lowest death rate at 1.8%. As stated under Data Limitations, the unclear racial makeup of the Hispanic/Latino category means this rate could be misleading.
 
 <img width="676" alt="death_rate_by_race" src="https://user-images.githubusercontent.com/46951897/142100531-2111c16c-606d-4fbd-941d-b08436624727.png">
 
