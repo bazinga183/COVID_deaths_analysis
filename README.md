@@ -14,7 +14,7 @@ Any data/transformations done will be committed to a branch that is not the main
 ### Roles
  - **Eduardo** is responsible for overseeing the repository and any actions taken by team members to update it, including pull requests and merging. 
  - **Caroline** is responsible for developing the machine learning model to identify COVID-19 case outcome. This includes integrating the model with the database in which the data is stored.
- - **Raquel** is responsible for conducting an ETL process on the CDC data, including data cleaning and wrangling, and database design and creation. She is also responsible for all dashboard and visualization design.
+ - **Raquel** is responsible for conducting an ETL process on the CDC data, including data cleaning and wrangling, and database design and creation. She is also responsible for dashboard and visualization design.
 
 ## Source Data
 
@@ -40,62 +40,97 @@ The data fields used in this analysis are as follows:
 
 For binary fields, 0 corresponds to "No" and 1 to "Yes".
 
+### Data Preprocessing
+The original data set from the CDC contained over 30M rows of data. For the purposes of this project we chose to focus on one year of cases, from Oct. 1, 2020 to Oct. 9, 2021, containing the latest available data at time of access. Because we were interested in determining factors that may influence case outcome, we reduced the set to contain only cases where the outcome was definitively reported, that is, the patient died or the patient did not die. A unique id was then assigned to each record. Finally, the data was split into [separate tables](https://github.com/bazinga183/COVID_deaths_analysis/tree/main/Resources/Data), each containing a record id and one patient detail (except date and death, which were grouped in the same table). Any unknown or missing values were dropped, resulting in tables of different sizes that could nevertheless be joined on id. The resulting data set was stored in SQL database and used for the purposes of data visualization.
+
+For our machine learning model, we further reduced the combined data set to only contain rows in which there were no unknown or missing values for any field. This [data set](https://github.com/bazinga183/COVID_deaths_analysis/blob/main/Resources/Data/covid_case_data.csv) contains approximately 1.3M rows.
+
 ### Data Limitations
-The raw CDC data set contains many unknown or missing values across every health factor. As our analysis aims to measure the influence of certain health factors relative to others on COVID-19 case outcome, we have chosen to focus on case records that have clearly reported values for each factor. Further analysis might focus on fewer factors to allow the use of more cases, as some metrics have fewer unknowns than others. We see our analysis as one that can point to relationships between COVID-19 case outcome and patient information, so that those relationships can be more closely targeted by future investigation.
+There are some possible limitations of this data:
 
-## Tableau Visualization
+- The data contains only COVID-19 cases that were reported to the CDC. Any infections that were not detected or reported for any reason (for example, infections that produced few or no symptoms) are naturally not included.
+- Race and ethnicity have been grouped into a single dimension, with each race category defined as non-Hispanic/Latino. The Hispanic/Latino category consequently may include patients of any race(s), potentially obscuring the influence of race on Hispanic/Latino patients as a group (since the group of people in the US with Hispanic or Latino heritage represents a broader range of socioeconomic conditions than any one racial group).
+- While the presence of an underlying medical condition is reported, what those conditions are remains unknown.
+- The raw CDC data set contains many unknown or missing values across every health factor. Further analysis might focus on fewer factors to allow the use of more cases in a machine learning model, as some metrics have fewer unknowns than others. We see our analysis as one that can point to relationships between COVID-19 case outcome and patient information, so that those relationships can be more closely targeted by future investigation.
 
-We decided to map out the data we had on hand to get a look at what would be in store for this project. All visualizations used for this project will be located in a Tableau Public [webpage](https://public.tableau.com/app/profile/raquel.gaucin/viz/COVID-19CaseAnalysis/COVID-19CaseAnalysisDashboard).
+## Visualization
+
+As stated, our visualizations were produced using all case data from Oct. 1, 2020 to Oct. 9, 2021 with a definitively reported outcome. When a health factor is used in a visualization, any produced statistics are calculated using only the cases where there are reported values for that factor. For example, an assertion that the death rate of female patients was 2%, means that 2% of cases in which the patient was reported as female resulted in death.
+
+The final dashboard for our project is located in a Tableau Public [webpage](https://public.tableau.com/app/profile/raquel.gaucin/viz/COVID-19CaseAnalysis/COVID-19CaseAnalysisDashboard).
 
 ### Surface-Level Visualizations
 
-#### Medical Condition
-Our curiosity begins when we look at the death rate while having a medical condition at the time.Approximately 6% of those with a medical condition succumbed to the virus, whereas almost 2% of those without a medical condition passed away. This means that having a medical condition while infected with COVID-19 implies a 300% higher chance of death. 
-
-<img width="673" alt="death_rate_by_med_cond" src="https://user-images.githubusercontent.com/46951897/142105662-4bb0e531-c2e8-48ee-8930-780cf3566e93.png">
+Our first visualizations compared death rates across categories within each petient demographic.
 
 #### Sex
 
-After medical condition, we looked at the death rate by sex. We observe in the visualization below that females had an approximate death rate of 2% and males 3%. However, within the data, there is an "unknown" gender whose death rate is at approximately 1.5%.  
+Turning toward death rate by sex, we observe in the visualization below that female patients had a death rate of 2.2%, while male patients had a modestly higher rate of 2.9%. Patients whose sex was reported as "Other" showed a death rate of 1.4%.  
 
 <img width="677" alt="death_rate_by_sex" src="https://user-images.githubusercontent.com/46951897/142095573-c62956bf-6ec8-4e63-914d-5a8bb7a6d47f.png">
 
 #### Age
 
-For our next simple comparison, we decided to examine the age cohorts where each cohort spanned a range of 10 years. The most dominant death rate by far is for those who are past 80 years of age since there death rate is approxmately 29%. This is close to saying that 3 in 10 adults 80+ years old who contracted COVID would succumb to the virus. This graph is also interesting because there is an almost exponential increase in the probability of dying as a person ascends through each age group.
+We then examine death rates across age groups. The highest death rate by far is that of those above 80 years of age, at 28.7%. This will prove to be the highest death rate for any single category in our entire analysis. Furthermore, the graph shows a consistent trend of exponential increase in death rate as age increases.
 
 <img width="677" alt="death_rate_by_age" src="https://user-images.githubusercontent.com/46951897/142096388-22b024b3-cbb6-46c6-8cef-7d74deb38aa8.png">
 
 #### Race/Ethnicity
 
-Here is where some of the group found their inital surprises when comparing general death rates across only race/ethnicity (r/e). We found that American Indian/Alaskan Natives had the highest death rate among the other r/e's by half a percentage point at aproximately 4%. The r/e that followed was the White r/e at approximately 3.5%. 
+Analysis of death rate across race/ethnicity produced some initial surprises. We find that American Indian/Alaskan Natives had the highest death rate at 4.0%. Following were White patients with a rate of 3.5%, and Black patients with 3.3%. Notably, Hispanic/Latino patients showed the lowest death rate at 1.8%. As stated under Data Limitations, the unclear raacial makeup of the Hispanic/Latino category means this rate could be misleading.
 
 <img width="676" alt="death_rate_by_race" src="https://user-images.githubusercontent.com/46951897/142100531-2111c16c-606d-4fbd-941d-b08436624727.png">
 
+#### Medical Condition
+We finally look at the influence of medical conditions on patient death rate. Approximately 6% of those with a medical condition succumbed to the virus, compared to 2.3% of those without a medical condition. This shows that as a group, patients with underlying medical conditions suffered over twice as many deaths as those without. 
+
+<img width="673" alt="death_rate_by_med_cond" src="https://user-images.githubusercontent.com/46951897/142105662-4bb0e531-c2e8-48ee-8930-780cf3566e93.png">
+
 ### In-Depth Visualiztions
 
-For these following visualizations, we pulled together multiple factors that always includes age since there seems to be a correlation between death and age. This is to see if there are any other compunding factors that contribute to the death rate of infected people.
+For these following visualizations, we compared the death rates of multiple health factors to drill down on trends found in our previous visualizations. Because the most striking correlation to death rate found came from patient age, we examine age compared to sex and age compared to race/ethnicity. Additional heatmap comparisons between all factors can be found in our [Visualizations folder](https://github.com/bazinga183/COVID_deaths_analysis/tree/main/Resources/Visualizations).
 
 #### Death Rate by Age and Sex
 
-When looking at the death rate as a consequence of an individual's age and sex, we can see from the heatmap that the age cohorts within the 70's and 80's+ are still most impacted, regardless of gender.
+When looking at the death rate across patients' age and sex, we can see from the heatmap that the older age groups are still most impacted, regardless of gender.
 
 <img width="497" alt="age_sex_heatmap" src="https://user-images.githubusercontent.com/46951897/142118875-f539649a-c61e-4c0c-9295-260ccced7471.png">
 
 #### Death Rate by Age and Race/Ethnicity
 
-Looking back at a different visualization, we see that American Indian/Alaska Natives are most impact by COVID. They are the only r/e to have a significant death rate within their 50's. In addition, they also have a higher death rate within their 70's compared to the other r/e groups. 
-Another interesting result to note is that Native Hawaaian/Pacific Islanders and Multiple/Other, Non-Hispanics have a lower death rate within their 80's compared to the others.
+Examining death rate by age and race/ethnicity, we see that the general trend across age groups continues to hold.
+
+As previously seen, American Indian/Alaska Natives have the highest death rate of any race/ethnicity, and the following visualization show that they are the only group to have a significant death rate within their 50's. Additionally, they have a higher death rate within their 70's compared to the other racial groups.
+
+Another interesting result to note is that Native Hawaiian/Pacific Islanders and Multiple/Other, Non-Hispanics have a lower death rate within their 80's compared to the others.
 
 <img width="532" alt="race_age_heatmap" src="https://user-images.githubusercontent.com/46951897/142551899-8f529c75-7261-4c82-80d3-b37973b383f7.png">
 
+#### Age Group Breakdown
+
+We further interrogated the age/death rate relationship by examining the composition of each age group in terms of other demographics.
+
+This graph shows that among patients with a reported race, 74% of patients 80 years of age and over were reported as White. This percentage decreases steadily with age group (70-79: 69.7%, 60-69: 63.1%). This is noteworthy because if age is a strong predictor of death from COVID-19, then a prevalence of older White patients may account for a high observed death rate for White patients as a whole. Looking back at our heatmap comparing age and race, White patients are among the lower death rates across almost every age group.
+
+INSERT AGE RACE BREAKDOWN
+
+Breaking down age groups by presence of a medical condition shows that more older patients tend to have a medical condition. This seems intuitive.
+
+INSERT AGE MED COND BREAKDOWN
+
+Composition by sex shows a more or less even break between male and female patients, with the largest imbalance being in the 80+ group (female patients comprise 59%). Like medical condition across age, this is an expected trend.
+
+INSERT AGE SEX BREAKDOWN
+
 #### Metrics Over Time
 
-While these visualizations have told an interesting story, our team was also curious about the death rate as the pandemic went on. The following visualization paints an abyssmal, but hopeful picture as early into the pandemic those who were above 80 years old had a 33% chance of dying and those in their 70's had a 13% chance of dying. 
-However, after almost a year within the pandemic and facing shutdown within the US, the death rate for those in their 80's decreased to approximately 15% and those in their 70's had their death rate decrease to almost 7%. 
-Both age cohorts cut their death rates by 50%, an astounding result for an unknown virus at the time, and the remaining cohorts saw little-to-no change remaining under a 6% death rate for the entirety of the pandemic.
+While these visualizations have told an interesting story, our team was also curious about the death rate as the pandemic went on. The following visualization continues to support the correlation between death rate and age.
 
 <img width="873" alt="death_rate_age_over_time" src="https://user-images.githubusercontent.com/46951897/142553505-1ef9a790-63ec-4e08-8918-df16931895c3.png">
+
+Earlier into the pandemic, in November of 2020, those who were above 80 years old had a death rate of 33% and the death rate of those in their 70s was 13%. However, after almost a year within the pandemic and facing shutdown within the US, the death rate for those in their 80's decreased to under 15% in September 2021 while those in their 70s had their death rate decrease to almost 7%.
+
+Both age cohorts cut their death rates by 50%, an astounding result for an unknown virus at the time, and the remaining cohorts saw little-to-no change remaining under a 6% death rate for the entirety of the pandemic.
 
 ## Analysis
 
