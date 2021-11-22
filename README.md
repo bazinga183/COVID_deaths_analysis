@@ -41,9 +41,20 @@ The data fields used in this analysis are as follows:
 For binary fields, 0 corresponds to "No" and 1 to "Yes".
 
 ### Data Preprocessing
-The original data set from the CDC contained over 30M rows of data. For the purposes of this project we chose to focus on one year of cases, from Oct. 1, 2020 to Oct. 9, 2021, containing the latest available data at time of access. Because we were interested in determining factors that may influence case outcome, we reduced the set to contain only cases where the outcome was definitively reported, that is, the patient died or the patient did not die. A unique id was then assigned to each record. Finally, the data was split into [separate tables](https://github.com/bazinga183/COVID_deaths_analysis/tree/main/Resources/Data), each containing a record id and one patient detail (except date and death, which were grouped in the same table). Any unknown or missing values were dropped, resulting in tables of different sizes that could nevertheless be joined on id. The resulting data set was stored in SQL database and used for the purposes of data visualization.
+The original data set from the CDC contained over 30M rows of data. For the purposes of this project we chose to focus on one year of cases, from Oct. 1, 2020 to Oct. 9, 2021, containing the latest available data at time of access. Because we were interested in determining factors that may influence case outcome, we reduced the set to contain only cases where the outcome was definitively reported, that is, the patient died or the patient did not die. A unique id was then assigned to each record. Finally, the data was split into [separate tables](https://github.com/bazinga183/COVID_deaths_analysis/tree/main/Resources/Data), each containing a record id and one patient detail (except date and death, which were grouped in the same table). Any unknown or missing values were dropped, resulting in tables of different sizes that could nevertheless be joined on id. The resulting data set contains approximately 14.4M rows and was stored in an SQL database and used for the purposes of data visualization.
 
 For our machine learning model, we further reduced the combined data set to only contain rows in which there were no unknown or missing values for any field. This [data set](https://github.com/bazinga183/COVID_deaths_analysis/blob/main/Resources/Data/covid_case_data.csv) contains approximately 1.3M rows.
+
+For clarity and transparency, the percentages of reported (non-unknown) values for each health factor in the larger data set are as follows:
+
+- **Deaths:** 100% (since this set is defined by cases with definitive outcomes)
+- **Sex:** 99.23%
+- **Age Group:** 99.88%
+- **Race/Ethnicity:** 73.12%
+- **Medical Condition:** 12.97%
+- **Hospitalization:** 54.82%
+
+The data set used for our machine learning model is 9% of the larger data set.
 
 ### Data Limitations
 There are some possible limitations of this data:
