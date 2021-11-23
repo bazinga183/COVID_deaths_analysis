@@ -4,6 +4,8 @@ This repository is updated and maintained by Eduardo Flores, Raquel Gaucin, and 
 ## Overview
 Our project focuses on outcomes of COVID-19 cases in the US, and specific patient health factors that may influence them. The COVID-19 pandemic is an ongoing health crisis, and quantifying the relationship between patient information and death from COVID can be instrumental in discovering issues that may be contributing to the disease's death toll. It can also be valuable in reducing the impact of future pandemics. This analysis aims to develop a machine learning model that will accurately predict COVID-19 case outcome given various patient data.
 
+A Google Slideshow used to present out findings can be found [here.](https://docs.google.com/presentation/d/1I1RStNFEprZzmfYRikMwmVA-HF4LluW-ybb3Qpou-dk/edit?usp=sharing)
+
 ## Project Protocols
 
 ### Roles
