@@ -213,4 +213,4 @@ Analyzing the results of the model that takes hospitalization data as an input, 
 
 Analyzing the accuracy score to see the model's overall performance, we can see that the model with the highest accuracy score was Easy Ensemble  with 92%, while Random Forest presented 62%.
 
-After analyzing these two main statistics, the model that was able to accurately predict COVID outcomes is the Easy Ensemble Classifying model.
+After analyzing these two main statistics, the model that was able to accurately predict COVID outcomes is the Easy Ensemble Classifying model. For a brief summary of the project, feel free to check out this [link](https://docs.google.com/presentation/d/1I1RStNFEprZzmfYRikMwmVA-HF4LluW-ybb3Qpou-dk/edit#slide=id.g1022060d782_0_11) to a powerpoint presentation!
